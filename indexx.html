@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mushfira Mujeeb | Portfolio</title>
+  <style>
+    /* Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', Arial, sans-serif; background: #fdf6f0; color: #333; line-height: 1.6; cursor: none; }
+
+    /* Custom Pointer */
+    .cursor {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #e63946;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: 0.1s ease-out;
+      z-index: 1000;
+    }
+
+    /* Header */
+    header {
+      background: #a8dadc;
+      color: #1d3557;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; transition: 0.3s; }
+    header p { font-size: 1.1em; }
+
+    /* Navigation */
+    nav {
+      background: #f9c74f;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+      font-weight: bold;
+    }
+    nav a {
+      color: #1d3557;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: #ffddd2;
+      transform: scale(1.1);
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 25px 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .container:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    h2 { color: #457b9d; margin-bottom: 15px; }
+
+    /* Project Section */
+    .project {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-left: 5px solid #f9c74f;
+      background: #fef9f5;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    }
+    .project:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      background: #fff4e6;
+    }
+    .project a {
+      color: #e63946;
+      text-decoration: none;
+      margin-right: 12px;
+      transition: color 0.3s;
+    }
+    .project a:hover { color: #ff5722; text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #a8dadc;
+      color: #1d3557;
+      margin-top: 30px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="cursor"></div>
+
+  <header>
+    <h1>Mushfira Mujeeb</h1>
+    <p>BSc (Hons) Information Systems | Sabaragamuwa University of Sri Lanka</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container" id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am a second-year undergraduate student in Information Systems. 
+       I am passionate about learning IT skills, web development, cybersecurity, and databases. 
+       My goal is to build a strong foundation in programming and information systems while achieving a good GPA.</p>
+  </div>
+
+  <div class="container" id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Diabetes Prediction Website</h3>
+      <p>Created during a hackathon using machine learning models to predict diabetes risk.</p>
+      <a href="https://github.com/MayooriEkanthan/DiaSaver" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project">
+      <h3>Maker's Magic - Sample Website</h3>
+      <p>A sample website created as part of a university assignment, showcasing a small online store concept called "Maker's Magic" with creative products and navigation design.</p>
+      <a href="https://MushfiraMujeeb.github.io/maker-s-magic" target="_blank">Live Project</a>
+      <a href="https://github.com/MushfiraMujeeb/Maker-s-Magic" target="_blank">Source Code</a>
+    </div>
+
+    <div class="project">
+      <h3>Movie Ticket Booking System (Java)</h3>
+      <p>Developed a console-based system in Java to browse movies, select showtimes, and book tickets. Practiced core OOP concepts including classes, objects, inheritance, and data handling.</p>
+      <a href="https://github.com/MushfiraMujeeb/java-practice" target="_blank">View on GitHub</a>
+    </div>
+
+  </div>
+
+  <div class="container" id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mushfiramujeeb22@gmail.com">mushfiramujeeb22@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/MushfiraMujeeb" target="_blank">github.com/MushfiraMujeeb</a></p>
+    <p>LinkedIn: <a href="http://www.linkedin.com/in/mushfira-mujeeb-430453307" target="_blank">linkedin.com/in/mushfira-mujeeb-430453307</a></p>
+  </div>
+
+  <footer>
+    <p>© 2025 Mushfira Mujeeb | Portfolio</p>
+  </footer>
+
+  <script>
+    // Custom cursor animation
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    // Pointer grows on hover
+    const hoverElements = document.querySelectorAll('a, .project');
+    hoverElements.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.transform = 'translate(-50%, -50%) scale(1.8)';
+        cursor.style.background = 'rgba(230, 57, 70, 0.2)';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+        cursor.style.background = 'transparent';
+      });
+    });
+  </script>
+
+</body>
+</html>
